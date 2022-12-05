@@ -1,12 +1,9 @@
 function findUniq(arr) {
     var numberOccurance = {};
 
-    for (var i = 0; i < arr.length; i++) {
-        if (numberOccurance[arr[i]] === undefined) {
-            numberOccurance[arr[i]] = 0;
-        }
-        numberOccurance[arr[i]]++;
-    }
+    arr.forEach(function (item) {
+        numberOccurance[item] = numberOccurance[item] + 1 || 1;
+    });
 
     return Number(Object.entries(numberOccurance).find(([key, value]) => value === 1)[0]);
 }
