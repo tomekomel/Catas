@@ -1,11 +1,13 @@
 function findUniq(arr) {
-    var numberOccurance = {};
+  var numberOccurance = {};
 
-    arr.forEach(function (item) {
-        numberOccurance[item] = numberOccurance[item] + 1 || 1;
-    });
+  arr.forEach(function (item) {
+    numberOccurance[item] = numberOccurance[item] + 1 || 1;
+  });
 
-    return Number(Object.entries(numberOccurance).find(([key, value]) => value === 1)[0]);
+  return Number(
+    Object.entries(numberOccurance).find(([key, value]) => value === 1)[0]
+  );
 }
 
 module.exports = findUniq;
