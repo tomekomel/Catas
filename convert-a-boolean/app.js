@@ -1,5 +1,5 @@
 function booleanToString(b){
-  return new String(b).toString();
+  return b.toString();
 }
 
 module.exports = booleanToString;
